@@ -3,10 +3,10 @@
 
 """
 """
-    Creates an Amazon DynamoDB table that can be used to store data.
+    Adds Items to an Amazon DynamoDB table used to store data.
     The table uses Key as the partition key, no sort key is used.
 
-    :param TableName: The name of the table to create.
+    :param Item: A collection of attributes containing at least name.
 """
 
 # boto3 is the aws software development kit (sdk) for python
