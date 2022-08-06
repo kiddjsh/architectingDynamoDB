@@ -7,10 +7,9 @@
     The table uses Key as the partition key, no sort key is used.
 
     :param TableName: The name of the table to create.
-    :return: The newly created table.
 """
 
-#boto3 is the aws software development kit (sdk) for python
+# boto3 is the aws software development kit (sdk) for python
 import boto3
 
 # Gets the service resource.
