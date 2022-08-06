@@ -1,43 +1,47 @@
-import boto3
+"""
+   mySolution @ kiddjsh
 
-
-DDB_RESOURCE = boto3.resource('dynamodb', region_name="us-east-1")
+"""
 """
     Creates an Amazon DynamoDB table that can be used to store data.
-    The table uses the core of the service as the partition key and the
-    service as the sort key.
+    The table uses Key as the partition key, no sort key is used.
 
-    :param table_name: The name of the table to create.
+    :param TableName: The name of the table to create.
     :return: The newly created table.
 """
-    
-DDB_RESOURCE.create_table(
-        
-    TableName='DynamoDB_TestTable',
+
+#boto3 is the aws software development kit (sdk) for python
+import boto3
+
+# Gets the service resource.
+DDB_RESOURCE = boto3.resource('dynamodb', region_name="us-east-1")
+
+# Create the DynamoDB table.
+table = DDB_RESOURCE.create_table(
+    TableName='Services',
     KeySchema=[
-                    {'AttributeName': 'Core', 
+                    {'AttributeName': 'Key', 
                      'KeyType': 'HASH' # Partition key
                     },  
-                    {'AttributeName': 'Service', 
-                     'KeyType': 'RANGE' # Sort key
-                    }  
         ],
         AttributeDefinitions=[
-                    {'AttributeName': 'Core', 
+                    {'AttributeName': 'Key',
                      'AttributeType': 'S'
                     },
-                    {'AttributeName': 'Service', 
-                     'AttributeType': 'S'
-                    }
         ],
         ProvisionedThroughput={
                      'ReadCapacityUnits': 10, 
                      'WriteCapacityUnits': 10
             
         }
-    )
-    
-print("Table status:", DDB_RESOURCE.create_table)
+)
+
+# Waits until the table exists.
+table.wait_until_exists()
+
+# Prints out some data about the table.
+print(table)
+print("Table created successfully!")
 
 
 
