@@ -9,4 +9,4 @@
 
 Hi there! Welcome to my GitHub Project!
 
-AWS re/Start Architecting: Developing with Amazon DynamoDB, EC2, and S3, by integrating GitHub with Cloud9, using the Cloud9 Environment and AWS Software Development Kit (SDK) Python (Boto), in developing a solution by coding to create a DynamoDB table, add / edit data to the table, query the table, and create an index on an existing table, with the chosen Cloud9 SDK Language.  
+AWS re/Start Architecting: Utilizing my AWS FREE TIER ACCOUNT in Developing with Amazon DynamoDB, EC2, and S3, by integrating GitHub with Cloud9, using the Cloud9 Environment and AWS Software Development Kit (SDK) Python (Boto), in developing a solution by coding to create a DynamoDB table, add / edit data to the table, query the table, and create an index on an existing table, with the chosen Cloud9 SDK Language.  
