@@ -1,12 +1,13 @@
 """
-   mySolution @kiddjsh
+   AWS_DynamoDB_Solutions #kiddjsh
 
 """
 """
     Creates an Amazon DynamoDB table that can be used to store data.
-    The table uses Key as the partition key, no sort key is used.
+    The table uses Entity as the partition key, no sort key is used.
 
     :param TableName: The name of the table to create.
+    :param KeySchema: Specifies the primary key for the table.
 """
 
 # boto3 is the aws software development kit (sdk) for python
@@ -24,7 +25,7 @@ table = DDB_RESOURCE.create_table(
     KeySchema=[
         {
             #The name of this key attribute.
-            "AttributeName": "Locus",
+            "AttributeName": "Entity",
             #The role that the key attribute will assume.
             "KeyType": "HASH"
         }
@@ -34,7 +35,7 @@ table = DDB_RESOURCE.create_table(
     AttributeDefinitions=[
         {
             #The name of the attribute.
-            "AttributeName": "Locus",
+            "AttributeName": "Entity",
             #The data type for the attribute.
             "AttributeType": "S"
         }
