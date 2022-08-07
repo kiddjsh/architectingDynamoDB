@@ -35,6 +35,6 @@ table.update_item(
     ExpressionAttributeValues={
         ":E": "AWS Cloud Architect"
     },
-    #Gets the item attributes as they appear before they were deleted.
+    #Returns only the updated attributes, after the UpdateItem operation.
     ReturnValues="UPDATED_NEW"
 )
