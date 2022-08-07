@@ -163,6 +163,54 @@ table.put_item(
    }
 )
 
+# Creates a new item, or replaces an old item with a new item.
+table.put_item(
+    # A map of attribute name/value pairs, one for each attribute.
+    Item={
+        #Attribute described as a name-value pair. 
+        #The name is the data type, and the value is the data itself.
+        "Echo": "SysOps Administration",
+        "Locus": "Certified Cloud Practitioner (CCP)",
+        "Entity": "00012"
+   }
+)
+
+# Creates a new item, or replaces an old item with a new item.
+table.put_item(
+    # A map of attribute name/value pairs, one for each attribute.
+    Item={
+        #Attribute described as a name-value pair. 
+        #The name is the data type, and the value is the data itself.
+        "Echo": "Cloud Development",
+        "Locus": "Certified Cloud Practitioner (CCP)",
+        "Entity": "00013"
+   }
+)
+
+# Creates a new item, or replaces an old item with a new item.
+table.put_item(
+    # A map of attribute name/value pairs, one for each attribute.
+    Item={
+        #Attribute described as a name-value pair. 
+        #The name is the data type, and the value is the data itself.
+        "Echo": "Cloud DevOps Engineer",
+        "Locus": "Certified Cloud Practitioner (CCP)",
+        "Entity": "00014"
+   }
+)
+
+# Creates a new item, or replaces an old item with a new item.
+table.put_item(
+    # A map of attribute name/value pairs, one for each attribute.
+    Item={
+        #Attribute described as a name-value pair. 
+        #The name is the data type, and the value is the data itself.
+        "Echo": "Cloud Software Engineer",
+        "Locus": "Certified Cloud Practitioner (CCP)",
+        "Entity": "00014"
+   }
+)
+
 # Waits until the table exists.
 table.wait_until_exists()
 
