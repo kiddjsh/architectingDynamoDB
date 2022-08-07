@@ -20,6 +20,7 @@ DDB_RESOURCE = boto3.resource("dynamodb", region_name="us-east-1")
 # A resource representing an Amazon DynamoDB Table
 table = DDB_RESOURCE.Table("Architecture")
 
+# The primary key of the item to be updated and a value for that attribute.
 Entity = "00011"
 
 # Edits an item's attribute, or adds a new item if it does not already exist. 
