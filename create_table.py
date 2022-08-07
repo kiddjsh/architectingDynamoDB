@@ -6,6 +6,7 @@
     Creates an Amazon DynamoDB table that can be used to store data.
     The table uses Entity as the partition key, no sort key is used.
 
+    :Python Version: Python 3.7.10
     :param TableName: The name of the table to create.
     :param KeySchema: Specifies the primary key for the table.
 """
@@ -30,8 +31,7 @@ table = DDB_RESOURCE.create_table(
             "KeyType": "HASH"
         }
     ],
-    #An array of objects that describe one attribute in the table and 
-    #index key schema.
+    #An array of objects that describe one attribute and index key schema.
     AttributeDefinitions=[
         {
             #The name of the attribute.
@@ -40,14 +40,11 @@ table = DDB_RESOURCE.create_table(
             "AttributeType": "S"
         }
     ],
-    #The settings for the table, consisting of read and write capacity units, 
-    #along with data about increases and decreases.
+    #The setting consisting of read and write capacity units 
     ProvisionedThroughput={
         #The maximum number of strongly consistent reads consumed per second 
-        #before DynamoDB returns a ThrottlingException .
         "ReadCapacityUnits": 10,
-        #The maximum number of writes consumed per second before DynamoDB 
-        #returns a ThrottlingException .
+        #The maximum number of writes consumed per second  
         "WriteCapacityUnits": 10
     }
 )
